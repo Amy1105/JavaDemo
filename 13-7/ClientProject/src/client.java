@@ -2,14 +2,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class client extends Frame implements ActionListener {
+//TIP 要<b>运行</b>代码，请按 <shortcut actionId="Run"/> 或
+// 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
+public class client extends Frame implements ActionListener  {
     int i = 1;
     Frame f;
     TextField ip, port;
     Label Lip, Lport;
     Button connect, exit;
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         client cl = new client();
         cl.init();
     }
