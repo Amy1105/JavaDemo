@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.Socket;
 
-public class threadClient extends Frame implements Runnable , ActionListener {
+public class ThreadClient extends Frame implements Runnable , ActionListener {
 
     String ip, port;
     int no;
@@ -18,7 +18,7 @@ public class threadClient extends Frame implements Runnable , ActionListener {
     BufferedReader in;
     BufferedWriter out;
 
-    public threadClient(String n, String m, int i) {
+    public ThreadClient(String n, String m, int i) {
         ip = n;
         port = m;
         no = i;
@@ -48,7 +48,7 @@ public class threadClient extends Frame implements Runnable , ActionListener {
         int portint = tmp.intValue();
 
         try {
-            s = new Socket(ip, port);
+            s = new Socket(ip, portint);
             in = new BufferedReader(new InputStreamReader(s.getInputStream()));
             out1 = new PrintStream(s.getOutputStream());
             ta.append(in.readLine());
