@@ -12,6 +12,7 @@ public class UnstableService {
         if (new Random().nextBoolean()) {
             throw new RuntimeException("网络波动，调用失败");
         }
+        //最后结果
         System.out.println("API 调用成功！");
     }
 }
