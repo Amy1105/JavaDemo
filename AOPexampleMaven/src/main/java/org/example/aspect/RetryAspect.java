@@ -1,5 +1,4 @@
 package org.example.aspect;
-//package org.example.annotation;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class RetryAspect {
     // 1. 定义剧本场景：哪些方法需要被安排“重试”这场戏？
-    @Pointcut("@annotation(com.example.annotation.Retryable)")
+    @Pointcut("@annotation(org.example.annotation.Retryable)")
     public void retryPointcut() {}
 
     // 2. 安排剧情：在目标方法执行时，用“环绕通知”来插入重试逻辑
